@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/semantic/semantic.min.css">
+    <style>
+        .main.container {
+            margin-top: 7em;
+        }
+    </style>
+</head>
+<body>
+<div class="ui fixed inverted menu">
+    <a href="/" class="header item">Accueil</a>
+    <a href="/flowers" class="header item">Add</a>
+</div>
+<div class="ui main container">
+    <% if(locals.flash && locals.flash.success){ %>
+    <div class="ui positive message">
+
+        <p><%= flash.success%></p>
+
+    </div>
+    <% }%>

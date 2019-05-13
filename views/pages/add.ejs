@@ -1,0 +1,37 @@
+<% include header %>
+<form action="/" method="post" class="ui form">
+    <h4 class="ui dividing header">Flower Information</h4>
+    <div class="field">
+        <label>Name</label>
+        <div class="two fields">
+            <div class="field">
+                <input type="text" name="name" placeholder="Flower Name">
+            </div>
+            <div class="field">
+                <select class="ui fluid dropdown" name="race">
+                    <option>Poison</option>
+                    <option>Romantique</option>
+                    <option>Therapethique</option>
+                    <option>Decoration</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label>Description</label>
+        <div class="two fields">
+            <div class="field">
+                <input type="text" name="description" placeholder="Description">
+            </div>
+            <div class="field">
+                <input type="number" name="price" placeholder="Price">
+            </div>
+        </div>
+    </div>
+    <div class="ui buttons">
+        <button class="ui button" type="reset">Cancel</button>
+        <div class="or"></div>
+        <button class="ui positive button" type="submit">Save</button>
+    </div>
+</form>
+<% include footer %>

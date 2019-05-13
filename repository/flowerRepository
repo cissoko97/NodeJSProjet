@@ -1,0 +1,31 @@
+let connection = require('../config/db')
+
+class FlowerRepository {
+    static create(flower, cb) {
+        connection.query('INSERT INTO flowers SET ?', flower, (error, result, fields) => {
+            if (error) {
+
+                throw error;
+            }
+            else {
+                cb(result);
+            }
+        })
+    }
+
+    static findAll(cb) {
+        connection.query('SELECT * FROM flowers', (error, rows) => {
+            if (error) throw error;
+            cb(rows);
+        })
+    }
+
+    static Delete(id, cb) {
+        connection.query('DELETE FROM flowers WHERE id =?', [id], (error, results, fields) => {
+            if (error) throw error;
+            cb(results);
+        })
+    }
+}
+
+module.exports = FlowerRepository;
